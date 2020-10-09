@@ -34,7 +34,11 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login();
+                if (txtUsername.getText().toString().isEmpty() || txtPassword.getText().toString().isEmpty()){
+                    Toast.makeText(LoginActivity.this, "Masukkan Username dan Password!", Toast.LENGTH_SHORT).show();
+                } else {
+                    login();
+                }
             }
         });
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +81,6 @@ public class LoginActivity extends AppCompatActivity {
                     line = br.readLine();
                 }
                 br.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }

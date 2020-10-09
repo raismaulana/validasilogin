@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
+        app:titleTextColor="#fff"
         android:id="@+id/toolbar"
         android:background="?attr/colorPrimary"
         android:layout_width="match_parent"
